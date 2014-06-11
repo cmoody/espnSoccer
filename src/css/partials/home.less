@@ -1,0 +1,84 @@
+.home {
+	height: 100%;
+	overflow: hidden;
+	padding-top: 30px;
+	.card-list {
+		overflow-y: scroll;
+		padding-bottom: 40px;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		.table-view-cell {
+			padding: 6px 15px 2px 15px;
+		}
+		.game {
+			.scores {
+				border-right: 1px solid #ddd;
+				width: 75%;
+				display: inline-block;
+				span {
+					float: right;
+					margin-right: 10px;
+				}
+			}
+			.time {
+				width: 22%;
+				display: inline-block;
+			}
+			.game-type {
+				border-top: 1px solid #ddd;
+				font-size: 0.65em;
+				margin-top: 5px;
+			}
+		}
+	}
+
+	.scores-list {
+		transition: all 0.2s linear;
+		-webkit-transform: translate3d(0, 0, 0);
+	}
+	.news-list {
+		transition: all 0.2s linear;
+		-webkit-transform: translate3d(100%, 0, 0);
+	}
+	.now-list {
+		transition: all 0.2s linear;
+		-webkit-transform: translate3d(100%, 0, 0);
+	}
+
+	&.slide-first {
+		.scores-list {
+			-webkit-transform: translate3d(0, 0, 0);
+		}
+		.news-list {
+			-webkit-transform: translate3d(100%, 0, 0);
+		}
+		.now-list {
+			-webkit-transform: translate3d(200%, 0, 0);
+		}
+	}
+
+	&.slide-second {
+		.scores-list {
+			-webkit-transform: translate3d(-100%, 0, 0);
+		}
+		.news-list {
+			-webkit-transform: translate3d(0, 0, 0);
+		}
+		.now-list {
+			-webkit-transform: translate3d(100%, 0, 0);
+		}
+	}
+
+	&.slide-third {
+		.scores-list {
+			-webkit-transform: translate3d(-200%, 0, 0);
+		}
+		.news-list {
+			-webkit-transform: translate3d(-100%, 0, 0);
+		}
+		.now-list {
+			-webkit-transform: translate3d(0, 0, 0);
+		}
+	}
+}
